@@ -1,0 +1,5 @@
+[book]
+authors = ["Jan Christian Grünhage"]
+multilingual = false
+src = "src"
+title = "upowdb"
