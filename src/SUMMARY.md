@@ -1,3 +1,8 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+- [Introduction](intro.md)
+- [Deployment](deployment.md)
+  - [Frontend](deployment/frontend.md)
+  - [Backend](deployment/backend.md)
+- [User Documentation](user.md)
+  - [Accounts](user/accounts.md)
