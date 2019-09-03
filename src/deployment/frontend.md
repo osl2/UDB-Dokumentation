@@ -4,7 +4,6 @@
 Notice! All example commands below are tested with Debian 10. If you are using a different operating system you need to understand what happens in these commands and translate them to work on your operating system! 
 We are not responsible for any damages to your system!
 Think before you execute any command shown on this page!
-
 :::
 
 ### Picking a Server OS
@@ -57,7 +56,7 @@ yarn build
 ```
 
 #### Copy files to be served by your webserver
-The application files were copied to the `dist` folder when you ran the `yarn build` command above. Now we need to but the files inside the folder which is delivered by our webserver.
+The application files were copied to the `dist` folder when you ran the `yarn build` command above. Now we need to put the files inside the folder which is delivered by our webserver.
 
 ``` bash
 cp -r dist/ /var/www/upowdb
@@ -67,6 +66,8 @@ cp -r dist/ /var/www/upowdb
 Now that we generated all needed files and copied them to the correct folder we need to configure our webserver to serve them.
 
 Below is an example how your nginx.conf could look like. If you are serving multiple pages with your webserver you should already know how to setup your webserver. Just remember to include the settings shown [here](https://router.vuejs.org/guide/essentials/history-mode.html#example-server-configurations).
+
+It is your own responsibility to secure the webserver (e.g. configure SSL).
 
 ``` bash
 #/etc/nginx/nginx.conf
@@ -147,7 +148,6 @@ systemctl enable docker
 ::: warning
 It is within your responsibility to secure the access to this container (e.g. using a reverse proxy like Traefik).
 Don't forget to configure SSL.
-
 :::
 
 ```bash
